@@ -8,9 +8,78 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Đăng nhập - eTax Mobile</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/native-like-experience.css">
   <link rel="stylesheet" href="login.css">
+  
+  <!-- CSS Variables -->
+  <style>
+    :root {
+      --color-primary: #C60000;
+      --color-primary-hover: #A50000;
+      --color-primary-light: #FF3333;
+      --color-success: #28a745;
+      --color-error: #dc3545;
+      --color-warning: #ffc107;
+      --color-info: #17a2b8;
+      --color-gray-50: #f8f9fa;
+      --color-gray-100: #e9ecef;
+      --color-gray-200: #dee2e6;
+      --color-gray-300: #ced4da;
+      --color-gray-400: #adb5bd;
+      --color-gray-500: #6c757d;
+      --color-gray-600: #495057;
+      --color-gray-700: #343a40;
+      --color-gray-800: #212529;
+      --color-gray-900: #111111;
+      --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      --font-size-xs: 0.75rem;
+      --font-size-sm: 0.875rem;
+      --font-size-base: 1rem;
+      --font-size-lg: 1.125rem;
+      --font-size-xl: 1.25rem;
+      --font-size-2xl: 1.5rem;
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --radius-base: 0.5rem;
+      --radius-lg: 0.75rem;
+      --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --transition-base: 200ms ease;
+      --text-primary: var(--color-gray-900);
+      --text-secondary: var(--color-gray-600);
+      --text-tertiary: var(--color-gray-500);
+      --text-inverse: var(--color-white);
+      --bg-primary: var(--color-white);
+      --bg-secondary: var(--color-gray-50);
+      --border-color: var(--color-gray-200);
+      --border-color-focus: var(--color-primary);
+      --input-bg: var(--bg-primary);
+      --input-border: var(--border-color);
+      --input-placeholder: var(--color-gray-500);
+      --focus-ring: 0 0 0 3px rgba(198, 0, 0, 0.1);
+      --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: var(--color-gray-100);
+        --text-secondary: var(--color-gray-400);
+        --text-tertiary: var(--color-gray-500);
+        --bg-primary: var(--color-gray-900);
+        --bg-secondary: var(--color-gray-800);
+        --border-color: var(--color-gray-700);
+        --input-bg: var(--color-gray-800);
+        --input-border: var(--color-gray-700);
+        --input-placeholder: var(--color-gray-500);
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Background -->
@@ -21,7 +90,7 @@
     <!-- Logo Section -->
     <div class="login-header">
       <div class="logo-container">
-        <img src="assets/logo-192.webp" alt="eTax Mobile" class="logo">
+        <img src="icons/icon_192.png" alt="eTax Mobile" class="logo">
         <h1 class="app-title">eTax Mobile</h1>
       </div>
     </div>
@@ -59,13 +128,7 @@
               class="password-toggle"
               aria-label="Hiện/ẩn mật khẩu"
             >
-              <img 
-                src="assets/icon-eye-closed.svg" 
-                id="password-toggle-icon"
-                alt=""
-                width="20"
-                height="20"
-              >
+              👁️
             </button>
           </div>
           <div class="form-error" id="password-error" aria-live="polite"></div>
@@ -96,38 +159,25 @@
   <nav class="bottom-nav" id="bottom-nav">
     <a href="home.html" class="nav-item">
       <div class="nav-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-          <polyline points="9,22 9,12 15,12 15,22"></polyline>
-        </svg>
+        🏠
       </div>
       <span class="nav-label">Trang chủ</span>
     </a>
     <a href="pages/tra-cuu-nghia-vu-thue.html" class="nav-item">
       <div class="nav-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"></circle>
-          <path d="m21 21-4.35-4.35"></path>
-          <path d="m11 8a3 3 0 0 1 3 3"></path>
-        </svg>
+        🔍
       </div>
       <span class="nav-label">Tra cứu</span>
     </a>
     <a href="pages/thong-bao.html" class="nav-item">
       <div class="nav-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-        </svg>
+        🔔
       </div>
       <span class="nav-label">Thông báo</span>
     </a>
     <a href="pages/thiet-lap-ca-nhan.html" class="nav-item">
       <div class="nav-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="3"></circle>
-          <path d="m12 1 2.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.91-2.01L12 1z"></path>
-        </svg>
+        ⚙️
       </div>
       <span class="nav-label">Tài khoản</span>
     </a>
@@ -135,5 +185,19 @@
 
   <!-- Scripts -->
   <script type="module" src="login.js"></script>
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('serviceWorker.js')
+          .then(function(registration) {
+            console.log('SW registered: ', registration);
+          })
+          .catch(function(registrationError) {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
