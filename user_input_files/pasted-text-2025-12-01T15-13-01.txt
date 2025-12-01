@@ -1,0 +1,45 @@
+mrkent@mrkent-All-Series:~/Bản tải về/pwa2$ sudo apt update
+Bỏq:1 https://dl.blisk.io/linux/chrome/deb stable InRelease
+Tìm thấy:2 https://dl.google.com/linux/chrome/deb stable InRelease                                                                                           
+Tìm thấy:3 https://packages.microsoft.com/repos/edge stable InRelease                                                                                        
+Tìm thấy:4 https://packages.microsoft.com/repos/code stable InRelease                                                                                        
+Tìm thấy:5 https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable InRelease                                                                     
+Tìm thấy:6 http://security.ubuntu.com/ubuntu noble-security InRelease                                                                                        
+Bỏq:1 https://dl.blisk.io/linux/chrome/deb stable InRelease                                 
+Tìm thấy:7 http://archive.ubuntu.com/ubuntu noble InRelease
+Tìm thấy:8 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Tìm thấy:9 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Bỏq:1 https://dl.blisk.io/linux/chrome/deb stable InRelease
+Lỗi:1 https://dl.blisk.io/linux/chrome/deb stable InRelease
+  Không thể phân giải “dl.blisk.io”
+Đang đọc các danh sách gói... Xong
+Đang xây dựng cây quan hệ phụ thuộc... Xong
+Đang đọc thông tin về tình trạng... Xong    
+Mọi gói đã được cập nhật.
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi_VN) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Gặp lỗi khi lấy về https://dl.blisk.io/linux/chrome/deb/dists/stable/InRelease  Không thể phân giải “dl.blisk.io”
+W: Một số tập tin chỉ mục không tải về được. Chúng đã bị bỏ qua, hoặc cái cũ đã được dùng thay thế.
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi_VN) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+mrkent@mrkent-All-Series:~/Bản tải về/pwa2$ 
