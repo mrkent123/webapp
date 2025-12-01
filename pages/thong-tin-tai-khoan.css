@@ -1,0 +1,169 @@
+/* Header */
+.page-header.account-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 1.5rem 1.25rem;
+  padding-top: calc(1.5rem + env(safe-area-inset-top, 0));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.header-back {
+  color: inherit;
+  text-decoration: none;
+  padding: 4px;
+}
+
+.header-title {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.header-home {
+  color: inherit;
+  padding: 4px;
+}
+
+/* Layout */
+.page-content.account-page {
+  margin-top: calc(95px + env(safe-area-inset-top, 0));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0));
+  background: #f3f4f6;
+}
+
+/* Avatar + actions block */
+.account-hero {
+  background: radial-gradient(circle at top, #1f2937 0%, #020617 55%, #020617 100%);
+  padding: 2.75rem 1.5rem 2.25rem;
+  text-align: center;
+}
+
+.account-avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.9rem;
+}
+
+.account-avatar-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111827;
+}
+
+.account-avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.account-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.account-action-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 0.6rem;
+  background: #c60000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.account-action-icon {
+  font-size: 1rem;
+}
+
+.account-action-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.account-action-text {
+  text-align: left;
+}
+
+.account-action-danger {
+  background: #b91c1c;
+}
+
+/* Thông tin tài khoản */
+.account-info-section {
+  background: #f5f5f5;
+  padding: 1.25rem 1.5rem 2rem;
+}
+
+.account-info-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.account-info-list {
+  margin: 0;
+  padding: 1.25rem 1.1rem;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.account-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 1rem;
+}
+
+.account-info-row:last-child {
+  border-bottom: none;
+}
+
+.account-info-row dt {
+  flex: 0 0 42%;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.account-info-row dd {
+  flex: 1;
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #111827;
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .page-content.account-page {
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+}

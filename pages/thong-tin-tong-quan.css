@@ -1,0 +1,115 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 1.5rem 1.25rem;
+  padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.header-back,
+.header-home {
+  color: inherit;
+  text-decoration: none;
+  padding: 4px;
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.page-content {
+  margin-top: calc(95px + env(safe-area-inset-top, 0px));
+  padding: 1.5rem 1.25rem;
+  background: #ffffff;
+  min-height: calc(100vh - 95px - env(safe-area-inset-top, 0px));
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.simple-form {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.simple-field {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.simple-label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  font-weight: 400;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.simple-field input {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: #374151;
+}
+
+.simple-field input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper input {
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.select-caret {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #000000;
+  pointer-events: none;
+}
+
+.primary-button {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.primary-button:active {
+  opacity: 0.9;
+}
+
+

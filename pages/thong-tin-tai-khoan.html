@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#C60000">
+  <title>Thông tin tài khoản - eTax Mobile</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="thong-tin-tai-khoan.css">
+</head>
+<body>
+  <!-- Header đỏ cố định -->
+  <header class="page-header account-header">
+    <a href="../home.html" class="header-back" aria-label="Quay lại trang chủ">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+    </a>
+    <h1 class="header-title">Thông tin tài khoản</h1>
+    <a href="../home.html" class="header-home" aria-label="Về trang chủ">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 10.5L12 3l9 7.5"/>
+        <path d="M5 10v10h14V10"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- Nội dung cuộn được -->
+  <main class="page-content account-page">
+    <!-- Khối avatar + 4 nút đỏ -->
+    <section class="account-hero">
+      <div class="account-avatar-wrapper">
+        <div class="account-avatar-circle">
+          <img
+            src="../assets/avatar.webp"
+            alt="Ảnh đại diện"
+            class="account-avatar-image"
+            width="120"
+            height="120"
+          >
+        </div>
+      </div>
+      <div class="account-actions-grid">
+        <button class="account-action-btn" type="button">
+          <span class="account-action-icon">
+            <img
+              src="../assets/icon1.webp"
+              alt=""
+              class="account-action-img"
+              width="24"
+              height="24"
+            >
+          </span>
+          <span class="account-action-text">Thay đổi<br>thông tin</span>
+        </button>
+        <button class="account-action-btn" type="button">
+          <span class="account-action-icon">
+            <img
+              src="../assets/icon-qr.webp"
+              alt=""
+              class="account-action-img"
+              width="24"
+              height="24"
+            >
+          </span>
+          <span class="account-action-text">Mã QR-<br>Code thông</span>
+        </button>
+        <button class="account-action-btn" type="button">
+          <span class="account-action-icon">
+            <img
+              src="../assets/icon-doimk.webp"
+              alt=""
+              class="account-action-img"
+              width="24"
+              height="24"
+            >
+          </span>
+          <span class="account-action-text">Đổi mật<br>khẩu</span>
+        </button>
+        <button class="account-action-btn account-action-danger" type="button">
+          <span class="account-action-icon">
+            <img
+              src="../assets/icon12.webp"
+              alt=""
+              class="account-action-img"
+              width="24"
+              height="24"
+            >
+          </span>
+          <span class="account-action-text">Xóa tài<br>khoản</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Khối thông tin chi tiết -->
+    <section class="account-info-section">
+      <h2 class="account-info-title">Thông tin tài khoản</h2>
+      <dl class="account-info-list">
+        <div class="account-info-row">
+          <dt>Mã số thuế</dt>
+          <dd id="account-mst">00109202830</dd>
+        </div>
+        <div class="account-info-row">
+          <dt>Tên đầy đủ</dt>
+          <dd id="account-fullname">tử xuân chiến</dd>
+        </div>
+        <div class="account-info-row">
+          <dt>Địa chỉ</dt>
+          <dd id="account-address">—</dd>
+        </div>
+        <div class="account-info-row">
+          <dt>Tên CQT quản lý</dt>
+          <dd id="account-tax-office">—</dd>
+        </div>
+        <div class="account-info-row">
+          <dt>Số điện thoại</dt>
+          <dd id="account-phone">—</dd>
+        </div>
+        <div class="account-info-row">
+          <dt>Thư điện tử</dt>
+          <dd id="account-email">—</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <script type="module" src="thong-tin-tai-khoan.js"></script>
+</body>
+</html>

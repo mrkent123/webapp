@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#C60000">
+  <title>Hồ sơ đăng ký thuế - eTax Mobile</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="ho-so-dang-ky-thue.css">
+</head>
+<body>
+  <!-- Header đỏ -->
+  <header class="page-header">
+    <a href="../home.html" class="header-back" aria-label="Quay lại trang chủ">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+    </a>
+    <h1 class="header-title">Hồ sơ đăng ký thuế</h1>
+    <a href="../home.html" class="header-home" aria-label="Về trang chủ">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 10.5L12 3l9 7.5"/>
+        <path d="M5 10v10h14V10"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- Form lọc hồ sơ giống ảnh gốc -->
+  <main class="page-content">
+    <section class="filter-section" aria-label="Tra cứu hồ sơ đăng ký thuế">
+      <div class="filter-card">
+        <div class="filter-field">
+          <label class="field-label" for="category-select">Danh mục tờ khai</label>
+          <div class="select-wrapper">
+            <select id="category-select" class="select-input">
+              <option>Tất cả -</option>
+              <option>Đăng ký thuế lần đầu</option>
+              <option>Thay đổi thông tin đăng ký thuế</option>
+            </select>
+            <span class="select-icon" aria-hidden="true">▾</span>
+          </div>
+        </div>
+
+        <div class="filter-field">
+          <label class="field-label" for="from-date">Từ ngày <span class="required">*</span></label>
+          <div class="date-wrapper">
+            <input id="from-date" type="text" class="text-input" value="21/11/2025">
+            <button type="button" class="icon-button" aria-label="Chọn ngày bắt đầu">
+              📅
+            </button>
+          </div>
+        </div>
+
+        <div class="filter-field">
+          <label class="field-label" for="to-date">Đến ngày <span class="required">*</span></label>
+          <div class="date-wrapper">
+            <input id="to-date" type="text" class="text-input" value="21/11/2025">
+            <button type="button" class="icon-button" aria-label="Chọn ngày kết thúc">
+              📅
+            </button>
+          </div>
+        </div>
+
+        <button type="button" class="primary-button">
+          Tra cứu
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="ho-so-dang-ky-thue.js"></script>
+</body>
+</html>

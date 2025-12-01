@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#C60000">
+  <title>Thông báo - eTax Mobile</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="thong-bao.css">
+</head>
+<body>
+  <header class="page-header section-header">
+    <a href="../home.html" class="header-back" aria-label="Quay lại trang chủ">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+    </a>
+    <h1 class="header-title">Thông báo</h1>
+    <a href="../home.html" class="header-home" aria-label="Về trang chủ">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 10.5L12 3l9 7.5"/>
+        <path d="M5 10v10h14V10"/>
+      </svg>
+    </a>
+  </header>
+
+  <main class="page-content">
+    <div class="notification-tabs">
+      <button class="notification-tab notification-tab-active" type="button">
+        Thông báo hành chính của CQT
+      </button>
+      <button class="notification-tab" type="button">
+        Biến động nghĩa vụ thuế
+      </button>
+      <button class="notification-tab" type="button">
+        Thông báo khác
+      </button>
+    </div>
+
+    <div class="notification-search">
+      <div class="notification-search-input">
+        <span class="notification-search-icon">&#128269;</span>
+        <input
+          type="text"
+          placeholder="Tìm theo nội dung hoặc ngày"
+          aria-label="Tìm theo nội dung hoặc ngày"
+        >
+      </div>
+      <button class="notification-advanced-btn" type="button">
+        Nâng cao
+      </button>
+    </div>
+
+    <section class="notification-list">
+      <article class="notification-item">
+        <div class="notification-meta">22/07/2025 10:29:40</div>
+        <h2 class="notification-title">
+          V/v : Tài khoản giao dịch thuế điện tử
+        </h2>
+      </article>
+    </section>
+  </main>
+
+  <script type="module" src="thong-bao.js"></script>
+</body>
+</html>

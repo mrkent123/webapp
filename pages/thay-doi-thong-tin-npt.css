@@ -1,0 +1,86 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
+}
+
+.header-back,
+.header-home {
+  color: white;
+  padding: 8px;
+}
+
+.header-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.page-content {
+  margin-top: calc(95px + env(safe-area-inset-top, 0px));
+  padding: 1.5rem 1rem;
+  background: #FFFFFF;
+  min-height: calc(100vh - 95px - env(safe-area-inset-top, 0px));
+}
+
+.simple-form {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.simple-field {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.simple-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #000000;
+  font-weight: 400;
+}
+
+.simple-field input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #D9D9D9;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.simple-field input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.primary-button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
