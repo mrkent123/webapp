@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupLoginForm();
   setupPasswordToggle();
   setupViewportHeight();
+  setupBadgeClose();
 });
 
 // Setup login form
@@ -110,16 +111,36 @@ function setupLoginForm() {
 function setupPasswordToggle() {
   const passwordInput = document.getElementById('password-input');
   const passwordToggle = document.getElementById('password-toggle');
-  const passwordToggleIcon = document.getElementById('password-toggle-icon');
+  const eyeIcon = passwordToggle.querySelector('.eye-icon');
+  let isEyeOpen = true;
 
   passwordToggle.addEventListener('click', () => {
     const isPassword = passwordInput.type === 'password';
     passwordInput.type = isPassword ? 'text' : 'password';
-    passwordToggleIcon.src = isPassword 
-      ? 'assets/icon-eye.svg' 
-      : 'assets/icon-eye-closed.svg';
-    passwordToggle.setAttribute('aria-label', isPassword ? 'Ẩn mật khẩu' : 'Hiện mật khẩu');
+    
+    // Toggle eye icon
+    if (isEyeOpen) {
+      eyeIcon.src = 'assets/icon-eye-closed.svg';
+      passwordToggle.setAttribute('aria-label', 'Hiện mật khẩu');
+    } else {
+      eyeIcon.src = 'assets/icon-eye.svg';
+      passwordToggle.setAttribute('aria-label', 'Ẩn mật khẩu');
+    }
+    
+    isEyeOpen = !isEyeOpen;
   });
+}
+
+// Setup badge close
+function setupBadgeClose() {
+  const badgeClose = document.querySelector('.badge-close');
+  const builtWithBadge = document.querySelector('.built-with-badge');
+  
+  if (badgeClose && builtWithBadge) {
+    badgeClose.addEventListener('click', () => {
+      builtWithBadge.style.display = 'none';
+    });
+  }
 }
 
 // Setup viewport height (fix iOS issues)
