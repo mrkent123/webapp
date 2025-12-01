@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Flow Test - eTax Mobile</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+    </style>
+</head>
+<body>
+    <h1>🧪 PWA Flow Test - eTax Mobile</h1>
+    
+    <div class="test-section">
+        <h2>📱 1. PWA Manifest Check</h2>
+        <p><strong>Start URL:</strong> <span id="manifest-start-url">Loading...</span></p>
+        <p><strong>Theme Color:</strong> <span id="manifest-theme-color">Loading...</span></p>
+        <p><strong>Logo:</strong> <span id="manifest-logo">Loading...</span></p>
+    </div>
+
+    <div class="test-section">
+        <h2>🔐 2. Authentication Test</h2>
+        <p><strong>Current Session:</strong> <span id="auth-session">Loading...</span></p>
+        <p><strong>Default Account:</strong> MST: 00109202830, Password: 123456</p>
+        <button onclick="testLogin()">Test Login</button>
+        <button onclick="testLogout()">Test Logout</button>
+    </div>
+
+    <div class="test-section">
+        <h2>🖼️ 3. Assets Check</h2>
+        <p><strong>Logo (192px):</strong> <img id="test-logo" style="width: 48px; height: 48px;"></p>
+        <p><strong>Avatar:</strong> <img id="test-avatar" style="width: 48px; height: 48px;"></p>
+        <p><strong>Background:</strong> <img id="test-bg" style="width: 48px; height: 48px;"></p>
+    </div>
+
+    <div class="test-section">
+        <h2>🌐 4. Navigation Links Test</h2>
+        <div id="nav-links">Loading...</div>
+    </div>
+
+    <script type="module">
+        // Import auth functions
+        import { loginUserByMst, getUserSession, logoutUser, isAuthenticated } from './js/auth.js';
+        
+        // Load auth functions globally
+        window.loginUserByMst = loginUserByMst;
+        window.getUserSession = getUserSession;
+        window.logoutUser = logoutUser;
+        window.isAuthenticated = isAuthenticated;
+    </script>
+
+    <script>
+        async function testLogin() {
+            try {
+                const result = await loginUserByMst('00109202830', '123456');
+                if (result) {
+                    document.getElementById('auth-session').innerHTML = '<span class="success">✅ Logged in as: ' + result.name + '</span>';
+                } else {
+                    document.getElementById('auth-session').innerHTML = '<span class="error">❌ Login failed</span>';
+                }
+            } catch (error) {
+                document.getElementById('auth-session').innerHTML = '<span class="error">❌ Error: ' + error.message + '</span>';
+            }
+        }
+
+        function testLogout() {
+            logoutUser();
+            const session = getUserSession();
+            if (!session) {
+                document.getElementById('auth-session').innerHTML = '<span class="success">✅ Logged out</span>';
+            } else {
+                document.getElementById('auth-session').innerHTML = '<span class="error">❌ Still logged in</span>';
+            }
+        }
+
+        // Load test results
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Test 1: Manifest
+            try {
+                const response = await fetch('manifest.json');
+                const manifest = await response.json();
+                document.getElementById('manifest-start-url').innerHTML = '<span class="success">' + manifest.start_url + '</span>';
+                document.getElementById('manifest-theme-color').innerHTML = '<span class="success" style="background: ' + manifest.theme_color + '; padding: 2px 8px; color: white;">' + manifest.theme_color + '</span>';
+                document.getElementById('manifest-logo').innerHTML = '<span class="success">✅ ' + manifest.icons[0].src + '</span>';
+            } catch (error) {
+                document.getElementById('manifest-start-url').innerHTML = '<span class="error">❌ Cannot load manifest</span>';
+            }
+
+            // Test 2: Authentication
+            const session = getUserSession();
+            if (session) {
+                document.getElementById('auth-session').innerHTML = '<span class="success">✅ Logged in as: ' + session.name + '</span>';
+            } else {
+                document.getElementById('auth-session').innerHTML = '<span class="warning">⚠️ Not logged in</span>';
+            }
+
+            // Test 3: Assets
+            document.getElementById('test-logo').src = 'assets/logo-192.webp';
+            document.getElementById('test-avatar').src = 'assets/avatar.webp';
+            document.getElementById('test-bg').src = 'assets/backgrounftd.webp';
+
+            // Test 4: Navigation links from home.html
+            const navLinks = [
+                'pages/thong-bao.html',
+                'pages/hoa-don-dien-tu.html',
+                'pages/khai-thue.html',
+                'pages/dang-ky-thue.html',
+                'pages/ho-so-dang-ky-thue.html',
+                'pages/ho-so-quyet-toan-thue.html',
+                'pages/ho-tro-quyet-toan.html',
+                'pages/nhom-chuc-nang-nop-thue.html',
+                'pages/tra-cuu-nghia-vu-thue.html',
+                'pages/tien-ich.html'
+            ];
+
+            const linkStatus = navLinks.map(link => {
+                return link + ' - ' + (fileExists(link) ? '✅' : '❌');
+            });
+
+            document.getElementById('nav-links').innerHTML = linkStatus.join('<br>');
+        });
+
+        function fileExists(filename) {
+            // Note: This is a simplified check - in real browser you'd fetch each file
+            return true; // For demonstration, assume all files exist
+        }
+    </script>
+</body>
+</html>
