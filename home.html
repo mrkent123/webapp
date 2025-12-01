@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#C60000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Trang chủ - eTax Mobile</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!-- Overlay background -->
+  <div class="overlay-bg"></div>
+
+  <!-- Content layer -->
+  <div class="content-layer">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-hidden="true" aria-label="Menu điều hướng">
+      <div class="sidebar-overlay" id="sidebar-overlay"></div>
+      <div class="sidebar-content">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+          <button class="sidebar-close" id="sidebar-close" aria-label="Đóng menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <div class="sidebar-logo">
+            <img src="assets/logo-192.webp" alt="Logo eTax Mobile" width="130" height="130">
+          </div>
+          <div class="sidebar-greeting">
+            <div class="greeting-text">Xin chào</div>
+            <div class="greeting-name" id="sidebar-name">Người dùng</div>
+            <div class="greeting-mst" id="sidebar-mst">MST: --</div>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="sidebar-menu" id="sidebar-menu">
+          <!-- Menu items will be populated by JavaScript -->
+        </nav>
+
+        <!-- Sidebar Footer -->
+        <div class="sidebar-footer">
+          <button class="sidebar-logout" id="sidebar-logout">Đăng xuất</button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Fixed Header -->
+    <header class="header" aria-label="Header chính">
+      <button class="header-menu" id="header-menu" aria-label="Mở menu điều hướng" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <div class="header-logo" id="header-logo">
+        <img src="assets/logo-192.webp" alt="Logo eTax Mobile - Về trang chủ" width="48" height="48">
+        <h1>eTax Mobile</h1>
+      </div>
+      <div class="header-actions">
+        <button class="header-action" aria-label="Quét QR code">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+        <a href="pages/thong-bao.html" class="header-action" aria-label="Xem thông báo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Scrollable Main Content -->
+    <main class="main-content" id="main-content">
+      <!-- User Profile Card -->
+      <div class="profile-card">
+        <div class="profile-avatar">
+          <img src="assets/avatar.webp" alt="Ảnh đại diện" width="64" height="64">
+        </div>
+        <div class="profile-info">
+          <p class="profile-mst" id="profile-mst">MST: --</p>
+          <div class="profile-name-row">
+            <p class="profile-name" id="profile-name">Người dùng</p>
+            <a href="pages/thong-tin-tai-khoan.html" class="profile-edit" aria-label="Xem thông tin tài khoản">
+              <img src="assets/nutha.webp" alt="" width="20" height="20">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frequently Used Features -->
+      <section class="section" aria-labelledby="frequent-features-heading">
+        <h2 id="frequent-features-heading" class="section-title">Chức năng hay dùng</h2>
+        <div class="features-scroll">
+          <nav class="features-list" aria-label="Danh sách chức năng thường dùng">
+            <a href="pages/tra-cuu-thong-tin-nguoi-phu-thuoc.html" class="feature-item">
+              <div class="feature-icon">
+                <img src="assets/icon1.webp" alt="" width="48" height="48">
+              </div>
+              <p class="feature-label">Tra cứu thông tin người phụ thuộc</p>
+            </a>
+            <a href="pages/ho-so-dang-ky-thue.html" class="feature-item">
+              <div class="feature-icon">
+                <img src="assets/icon2.webp" alt="" width="48" height="48">
+              </div>
+              <p class="feature-label">Hồ sơ đăng ký thuế</p>
+            </a>
+            <a href="pages/ho-so-quyet-toan-thue.html" class="feature-item">
+              <div class="feature-icon">
+                <img src="assets/icon3.webp" alt="" width="48" height="48">
+              </div>
+              <p class="feature-label">Hồ sơ quyết toán thuế</p>
+            </a>
+            <a href="pages/tra-cuu-chung-tu.html" class="feature-item">
+              <div class="feature-icon">
+                <img src="assets/icon4.webp" alt="" width="48" height="48">
+              </div>
+              <p class="feature-label">Tra cứu chứng từ thuế</p>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <!-- Service Grid -->
+      <section class="section section-services" aria-labelledby="services-heading">
+        <h2 id="services-heading" class="section-title">Danh sách nhóm dịch vụ</h2>
+        <nav class="services-grid" aria-label="Danh sách dịch vụ">
+          <a href="pages/hoa-don-dien-tu.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index1.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Hoá đơn điện tử</p>
+          </a>
+          <a href="pages/khai-thue.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index2.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Khai thuế</p>
+          </a>
+          <a href="pages/dang-ky-thue.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index3.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Đăng ký thuế</p>
+          </a>
+          <a href="pages/ho-tro-quyet-toan.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index4.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Hỗ trợ quyết toán thuế TNCN</p>
+          </a>
+          <a href="pages/nhom-chuc-nang-nop-thue.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index5.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Nhóm chức năng nộp thuế</p>
+          </a>
+          <a href="pages/tra-cuu-nghia-vu-thue.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index6.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Tra cứu nghĩa vụ thuế</p>
+          </a>
+          <a href="pages/thong-bao.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index7.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Tra cứu thông báo</p>
+          </a>
+          <a href="pages/tien-ich.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index8.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Tiện ích</p>
+          </a>
+          <a href="pages/ho-tro.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index9.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Hỗ trợ</p>
+          </a>
+          <a href="pages/thiet-lap-ca-nhan.html" class="service-item">
+            <div class="service-icon">
+              <img src="assets/index10.webp" alt="" width="48" height="48">
+            </div>
+            <p class="service-label">Thiết lập cá nhân</p>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="home.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

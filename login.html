@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#C60000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Đăng nhập - eTax Mobile</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/native-like-experience.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Background -->
+  <div class="login-background"></div>
+
+  <!-- Login Container -->
+  <div class="login-container" id="login-wrapper">
+    <!-- Logo Section -->
+    <div class="login-header">
+      <div class="logo-container">
+        <img src="assets/logo-192.webp" alt="eTax Mobile" class="logo">
+        <h1 class="app-title">eTax Mobile</h1>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form-container">
+      <form id="login-form" class="login-form">
+        <div class="form-group">
+          <label for="mst-input" class="form-label">Tài khoản (MST)</label>
+          <input 
+            type="text" 
+            id="mst-input" 
+            class="form-input" 
+            placeholder="Nhập mã số thuế"
+            inputmode="numeric"
+            autocomplete="username"
+            maxlength="15"
+          >
+          <div class="form-error" id="mst-error" aria-live="polite"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password-input" class="form-label">Mật khẩu</label>
+          <div class="password-input-container">
+            <input 
+              type="password" 
+              id="password-input" 
+              class="form-input" 
+              placeholder="Nhập mật khẩu"
+              autocomplete="current-password"
+            >
+            <button 
+              type="button" 
+              id="password-toggle" 
+              class="password-toggle"
+              aria-label="Hiện/ẩn mật khẩu"
+            >
+              <img 
+                src="assets/icon-eye-closed.svg" 
+                id="password-toggle-icon"
+                alt=""
+                width="20"
+                height="20"
+              >
+            </button>
+          </div>
+          <div class="form-error" id="password-error" aria-live="polite"></div>
+        </div>
+
+        <div class="form-error" id="error-message" aria-live="polite"></div>
+
+        <button type="submit" id="login-button" class="login-button">
+          Đăng nhập
+        </button>
+      </form>
+
+      <!-- Additional Links -->
+      <div class="login-links">
+        <a href="#" class="login-link">Quên mật khẩu?</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo Account Info -->
+  <div class="demo-info">
+    <h3>Tài khoản demo:</h3>
+    <p><strong>MST:</strong> 00109202830</p>
+    <p><strong>Mật khẩu:</strong> 123456</p>
+  </div>
+
+  <!-- Bottom Navigation (fixed) -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <a href="home.html" class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9,22 9,12 15,12 15,22"></polyline>
+        </svg>
+      </div>
+      <span class="nav-label">Trang chủ</span>
+    </a>
+    <a href="pages/tra-cuu-nghia-vu-thue.html" class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+          <path d="m11 8a3 3 0 0 1 3 3"></path>
+        </svg>
+      </div>
+      <span class="nav-label">Tra cứu</span>
+    </a>
+    <a href="pages/thong-bao.html" class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+        </svg>
+      </div>
+      <span class="nav-label">Thông báo</span>
+    </a>
+    <a href="pages/thiet-lap-ca-nhan.html" class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="m12 1 2.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.91-2.01L12 1z"></path>
+        </svg>
+      </div>
+      <span class="nav-label">Tài khoản</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script type="module" src="login.js"></script>
+</body>
+</html>

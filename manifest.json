@@ -1,13 +1,13 @@
 {
-    "name": "etaxmobile",
-    "short_name": "etaxmobile",
-    "description": "etax",
-    "theme_color": "#ffffff",
+    "name": "eTax Mobile",
+    "short_name": "eTax Mobile",
+    "description": "Tra cứu thuế điện tử - Cổng thông tin thuế điện tử",
+    "theme_color": "#C60000",
     "background_color": "#ffffff",
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "/login",
+    "start_url": "/login.html",
     "icons": [
         {
             "src": "icons/icon_192.png",
