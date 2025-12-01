@@ -1,7 +1,6 @@
 {
   "name": "workspace",
   "version": "1.0.0",
-  "description": "",
   "main": "home.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/mrkent123/webapp/issues"
   },
-  "homepage": "https://github.com/mrkent123/webapp#readme"
+  "homepage": "https://github.com/mrkent123/webapp#readme",
+  "description": ""
 }
