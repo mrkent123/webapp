@@ -1,0 +1,28 @@
+{
+  "general": {
+    "disableAutoUpdate": true,
+    "checkpointing": {
+      "enabled": false
+    }
+  },
+  "output": {
+    "format": "text"
+  },
+  "ui": {
+    "hideBanner": true,
+    "hideTips": true,
+    "hideFooter": true,
+    "showCitations": true,
+    "showLineNumbers": false
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  },
+  "tools": {
+    "approvalMode": "default",
+    "shell": {
+      "confirmBeforeExecute": true
+    }
+  },
+  "$version": 2
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#C60000">
+  <title>Thay đổi thông tin NPT - eTax Mobile</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="tra-cuu-thong-tin-nguoi-phu-thuoc.css">
+</head>
+<body>
+  <!-- Header đỏ giống app gốc -->
+  <header class="page-header">
+    <a href="../home.html" class="header-back" aria-label="Quay lại trang chủ">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+    </a>
+    <h1 class="header-title">Thay đổi thông tin NPT</h1>
+    <a href="../home.html" class="header-home" aria-label="Về trang chủ">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 10.5L12 3l9 7.5"/>
+        <path d="M5 10v10h14V10"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- Nội dung form -->
+  <main class="page-content">
+    <section class="form-section" aria-label="Thay đổi thông tin người phụ thuộc">
+      <div class="form-card">
+        <label class="field-label" for="mst-npt-input">
+          Mã số thuế <span class="required">*</span>
+        </label>
+        <div class="field-wrapper">
+          <input
+            id="mst-npt-input"
+            type="text"
+            inputmode="numeric"
+            class="text-input"
+            value="036099003866"
+            aria-describedby="mst-npt-hint"
+          >
+        </div>
+        <p id="mst-npt-hint" class="field-hint">
+          Nhập mã số thuế của người nộp thuế để tra cứu thông tin người phụ thuộc.
+        </p>
+        <button type="button" class="primary-button">
+          Tra cứu
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="tra-cuu-thong-tin-nguoi-phu-thuoc.js"></script>
+</body>
+</html>

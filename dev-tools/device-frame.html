@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Device Frame - Live Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .device-frame {
+            position: relative;
+            width: 400px; /* Slightly larger than actual to show frame */
+            height: 860px; /* Slightly larger than actual to show frame */
+            background: #111;
+            border-radius: 40px;
+            box-shadow: 
+                inset 0 0 0 8px #222,
+                inset 0 0 0 10px #000,
+                0 20px 60px rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            overflow: hidden;
+        }
+        
+        .notch {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 30px;
+            background: #111;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+        
+        .home-indicator {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+        
+        .screen {
+            width: 393px; /* iPhone 14 Pro width */
+            height: 852px; /* iPhone 14 Pro height */
+            background: white;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 0 1px #aaa;
+        }
+        
+        #web-content {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        
+        .controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 20;
+            display: flex;
+            gap: 10px;
+        }
+        
+        button {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background: #007AFF;
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        .url-input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 20;
+            width: calc(100% - 160px);
+        }
+        
+        .url-input input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="device-frame">
+        <div class="notch"></div>
+        <div class="controls">
+            <button id="refresh-btn">Refresh</button>
+            <button id="scale-100">100%</button>
+            <button id="scale-120">120%</button>
+            <button id="scale-150">150%</button>
+        </div>
+        <div class="url-input">
+            <input type="text" id="url-input" value="https://localhost:5173" placeholder="Enter URL to preview">
+        </div>
+        <div class="screen">
+            <iframe id="web-content" src="https://localhost:5173"></iframe>
+        </div>
+        <div class="home-indicator"></div>
+    </div>
+
+    <script src="reload-client.js"></script>
+    <script>
+        // Device frame functionality
+        const iframe = document.getElementById('web-content');
+        const urlInput = document.getElementById('url-input');
+        const refreshBtn = document.getElementById('refresh-btn');
+        const scale100Btn = document.getElementById('scale-100');
+        const scale120Btn = document.getElementById('scale-120');
+        const scale150Btn = document.getElementById('scale-150');
+
+        // Update iframe source when URL changes
+        urlInput.addEventListener('change', function() {
+            iframe.src = this.value;
+        });
+
+        // Refresh button
+        refreshBtn.addEventListener('click', function() {
+            iframe.src = iframe.src;
+        });
+
+        // Scale buttons
+        scale100Btn.addEventListener('click', function() {
+            document.querySelector('.screen').style.transform = 'scale(1)';
+            document.querySelector('.screen').style.transformOrigin = 'top left';
+        });
+
+        scale120Btn.addEventListener('click', function() {
+            document.querySelector('.screen').style.transform = 'scale(1.2)';
+            document.querySelector('.screen').style.transformOrigin = 'top left';
+        });
+
+        scale150Btn.addEventListener('click', function() {
+            document.querySelector('.screen').style.transform = 'scale(1.5)';
+            document.querySelector('.screen').style.transformOrigin = 'top left';
+        });
+
+        // Set initial URL from localStorage if available
+        if (localStorage.getItem('previewUrl')) {
+            const savedUrl = localStorage.getItem('previewUrl');
+            urlInput.value = savedUrl;
+            iframe.src = savedUrl;
+        }
+
+        // Save URL to localStorage when changed
+        urlInput.addEventListener('blur', function() {
+            localStorage.setItem('previewUrl', this.value);
+        });
+    </script>
+</body>
+</html>

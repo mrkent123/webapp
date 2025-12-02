@@ -1,0 +1,135 @@
+mrkent@mrkent-All-Series:~/Bản tải về/pwa2$ # Cập nhật hệ thống
+sudo apt update
+
+# Cài đặt đầy đủ libimobiledevice toolkit
+sudo apt install usbmuxd libimobiledevice6 libimobiledevice-utils ifuse
+
+# Cài đặt các dependency bổ sung
+sudo apt install libusbmuxd-tools libimobiledevice-glue-tools
+Bỏq:1 https://dl.blisk.io/linux/chrome/deb stable InRelease
+Tìm thấy:2 https://dl.google.com/linux/chrome/deb stable InRelease                                                                                           
+Tìm thấy:3 https://packages.microsoft.com/repos/edge stable InRelease                                                                                        
+Tìm thấy:4 https://packages.microsoft.com/repos/code stable InRelease                                                                                        
+Tìm thấy:5 http://security.ubuntu.com/ubuntu noble-security InRelease                                                                                        
+Tìm thấy:6 https://windsurf-stable.codeiumdata.com/wVxQEIWkwPUEAGf3/apt stable InRelease                                                                     
+Tìm thấy:7 http://archive.ubuntu.com/ubuntu noble InRelease                               
+Lấy:8 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Bỏq:1 https://dl.blisk.io/linux/chrome/deb stable InRelease
+Tìm thấy:9 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Bỏq:1 https://dl.blisk.io/linux/chrome/deb stable InRelease
+Lỗi:1 https://dl.blisk.io/linux/chrome/deb stable InRelease                                                                                                  
+  Không thể phân giải “dl.blisk.io”
+Đã lấy về 126 kB mất 7 giây (17,5 kB/g).                                                                                                                     
+Đang đọc các danh sách gói... Xong
+Đang xây dựng cây quan hệ phụ thuộc... Xong
+Đang đọc thông tin về tình trạng... Xong    
+Mọi gói đã được cập nhật.
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi_VN) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Gặp lỗi khi lấy về https://dl.blisk.io/linux/chrome/deb/dists/stable/InRelease  Không thể phân giải “dl.blisk.io”
+W: Một số tập tin chỉ mục không tải về được. Chúng đã bị bỏ qua, hoặc cái cũ đã được dùng thay thế.
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi_VN) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-vi) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-beta.list:3 and /etc/apt/sources.list.d/microsoft-edge.list:3
+Đang đọc các danh sách gói... Xong
+Đang xây dựng cây quan hệ phụ thuộc... Xong
+Đang đọc thông tin về tình trạng... Xong    
+usbmuxd is already the newest version (1.1.1-5~exp3ubuntu2).
+libimobiledevice6 is already the newest version (1.3.0-8.1build3).
+libimobiledevice6 được đặt thành “được cài đặt bằng tay”.
+libimobiledevice-utils is already the newest version (1.3.0-8.1build3).
+ifuse is already the newest version (1.1.4~git20181007.3b00243-1ubuntu3).
+0 nâng cấp, 0 được cài đặt mới, 0 cần gỡ bỏ, và 0 chưa được nâng cấp.
+Đang đọc các danh sách gói... Xong
+Đang xây dựng cây quan hệ phụ thuộc... Xong
+Đang đọc thông tin về tình trạng... Xong    
+E: Không thể định vị gói libimobiledevice-glue-tools
+mrkent@mrkent-All-Series:~/Bản tải về/pwa2$ # Khởi động service usbmuxd
+sudo systemctl start usbmuxd
+sudo systemctl enable usbmuxd
+
+# Kiểm tra status
+sudo systemctl status usbmuxd
+The unit files have no installation config (WantedBy=, RequiredBy=, UpheldBy=,
+Also=, or Alias= settings in the [Install] section, and DefaultInstance= for
+template units). This means they are not meant to be enabled or disabled using systemctl.
+ 
+Possible reasons for having these kinds of units are:
+• A unit may be statically enabled by being symlinked from another unit's
+  .wants/, .requires/, or .upholds/ directory.
+• A unit's purpose may be to act as a helper for some other unit which has
+  a requirement dependency on it.
+• A unit may be started when needed via activation (socket, path, timer,
+  D-Bus, udev, scripted systemctl call, ...).
+• In case of template units, the unit is meant to be enabled with some
+  instance name specified.
+● usbmuxd.service - Socket daemon for the usbmux protocol used by Apple devices
+     Loaded: loaded (/usr/lib/systemd/system/usbmuxd.service; static)
+     Active: active (running) since Mon 2025-12-01 22:10:40 +07; 407ms ago
+       Docs: man:usbmuxd(8)
+   Main PID: 81578 (usbmuxd)
+      Tasks: 2 (limit: 13837)
+     Memory: 1.1M (peak: 1.3M)
+        CPU: 7ms
+     CGroup: /system.slice/usbmuxd.service
+             └─81578 /usr/sbin/usbmuxd --user usbmux --systemd
+
+Thg 12 01 22:10:40 mrkent-All-Series systemd[1]: Started usbmuxd.service - Socket daemon for the usbmux protocol used by Apple devices.
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.197][3] usbmuxd v1.1.1 starting up
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.198][3] Successfully dropped privileges to 'usbmux'
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.198][3] Using libusb 1.0.27
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.202][3] Initialization complete
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.202][3] Enabled exit on SIGUSR1 if no devices are attached. Start a new instance with "--exit">
+...skipping...
+● usbmuxd.service - Socket daemon for the usbmux protocol used by Apple devices
+     Loaded: loaded (/usr/lib/systemd/system/usbmuxd.service; static)
+     Active: active (running) since Mon 2025-12-01 22:10:40 +07; 407ms ago
+       Docs: man:usbmuxd(8)
+   Main PID: 81578 (usbmuxd)
+      Tasks: 2 (limit: 13837)
+     Memory: 1.1M (peak: 1.3M)
+        CPU: 7ms
+     CGroup: /system.slice/usbmuxd.service
+             └─81578 /usr/sbin/usbmuxd --user usbmux --systemd
+
+Thg 12 01 22:10:40 mrkent-All-Series systemd[1]: Started usbmuxd.service - Socket daemon for the usbmux protocol used by Apple devices.
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.197][3] usbmuxd v1.1.1 starting up
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.198][3] Successfully dropped privileges to 'usbmux'
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.198][3] Using libusb 1.0.27
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.202][3] Initialization complete
+Thg 12 01 22:10:40 mrkent-All-Series usbmuxd[81578]: [22:10:40.202][3] Enabled exit on SIGUSR1 if no devices are attached. Start a new instance with "--exit">
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)

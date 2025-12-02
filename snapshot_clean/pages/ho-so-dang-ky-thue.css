@@ -1,0 +1,147 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 1.5rem 1.25rem;
+  padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.header-back,
+.header-home {
+  color: inherit;
+  text-decoration: none;
+  padding: 4px;
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.page-content {
+  margin-top: calc(95px + env(safe-area-inset-top, 0px));
+  padding: 1.5rem 1.25rem;
+  background: #ffffff;
+  min-height: calc(100vh - 95px - env(safe-area-inset-top, 0px));
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.filter-section {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.filter-card {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.filter-field + .filter-field {
+  margin-top: 1.5rem;
+}
+
+.field-label {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-weight: 400;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.select-wrapper {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.select-input {
+  width: 100%;
+  padding: 0.7rem 2.25rem 0.7rem 0.75rem;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background: transparent;
+  appearance: none;
+  color: #374151;
+}
+
+.select-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #000000;
+  pointer-events: none;
+}
+
+.date-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  padding-left: 0.75rem;
+}
+
+.text-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  padding: 0.65rem 0;
+  color: #374151;
+}
+
+.icon-button {
+  border: none;
+  background: transparent;
+  padding: 0 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #000000;
+}
+
+.primary-button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.9rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.primary-button:active {
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .page-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

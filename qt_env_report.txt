@@ -1,0 +1,12 @@
+Qt Environment Report
+
+Virtual Environment: /home/mrkent/dev/webapp/.venv
+Qt Plugin Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/plugins
+Qt Platform Plugin Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/plugins/platforms
+QtWebEngineProcess Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/libexec/QtWebEngineProcess
+QtWebEngine Chromium Flags: --no-sandbox
+
+QWebEngineView Import: SUCCESS
+QtWebEngineProcess Executable: YES
+xcb Integration Plugins: PRESENT
+wayland Integration Plugins: PRESENT

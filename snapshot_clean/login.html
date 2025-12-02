@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#C60000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Đăng nhập - eTax Mobile</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="login.css">
+  
+  <!-- CSS Variables -->
+  <style>
+    :root {
+      --color-primary: #C60000;
+      --color-primary-hover: #A50000;
+      --color-primary-light: #FF3333;
+      --color-success: #28a745;
+      --color-error: #dc3545;
+      --color-warning: #ffc107;
+      --color-info: #17a2b8;
+      --color-gray-50: #f8f9fa;
+      --color-gray-100: #e9ecef;
+      --color-gray-200: #dee2e6;
+      --color-gray-300: #ced4da;
+      --color-gray-400: #adb5bd;
+      --color-gray-500: #6c757d;
+      --color-gray-600: #495057;
+      --color-gray-700: #343a40;
+      --color-gray-800: #212529;
+      --color-gray-900: #111111;
+      --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      --font-size-xs: 0.75rem;
+      --font-size-sm: 0.875rem;
+      --font-size-base: 1rem;
+      --font-size-lg: 1.125rem;
+      --font-size-xl: 1.25rem;
+      --font-size-2xl: 1.5rem;
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --radius-base: 0.5rem;
+      --radius-lg: 0.75rem;
+      --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --transition-base: 200ms ease;
+      --text-primary: var(--color-gray-900);
+      --text-secondary: var(--color-gray-600);
+      --text-tertiary: var(--color-gray-500);
+      --text-inverse: var(--color-white);
+      --bg-primary: var(--color-white);
+      --bg-secondary: var(--color-gray-50);
+      --border-color: var(--color-gray-200);
+      --border-color-focus: var(--color-primary);
+      --input-bg: var(--bg-primary);
+      --input-border: var(--border-color);
+      --input-placeholder: var(--color-gray-500);
+      --focus-ring: 0 0 0 3px rgba(198, 0, 0, 0.1);
+      --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text-primary: var(--color-gray-100);
+        --text-secondary: var(--color-gray-400);
+        --text-tertiary: var(--color-gray-500);
+        --bg-primary: var(--color-gray-900);
+        --bg-secondary: var(--color-gray-800);
+        --border-color: var(--color-gray-700);
+        --input-bg: var(--color-gray-800);
+        --input-border: var(--color-gray-700);
+        --input-placeholder: var(--color-gray-500);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background -->
+  <div class="login-background"></div>
+
+  <!-- Login Container -->
+  <div class="login-container" id="login-wrapper">
+    <!-- Logo Section -->
+    <div class="login-header">
+      <div class="logo-container">
+        <div class="logo-circle">
+          <span class="logo-text">THUẾ<br>NHÀ NƯỚC</span>
+        </div>
+        <h1 class="app-title">eTax Mobile</h1>
+      </div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-form-container">
+      <form id="login-form" class="login-form">
+        <div class="form-group">
+          <label for="mst-input" class="form-label">Mã số thuế</label>
+          <input 
+            type="text" 
+            id="mst-input" 
+            class="form-input" 
+            placeholder="Vui lòng nhập tài khoản"
+            inputmode="numeric"
+            autocomplete="username"
+            maxlength="15"
+          >
+          <div class="form-error" id="mst-error" aria-live="polite"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password-input" class="form-label">Mật khẩu</label>
+          <div class="password-input-container">
+            <input 
+              type="password" 
+              id="password-input" 
+              class="form-input" 
+              placeholder="Nhập mật khẩu"
+              autocomplete="current-password"
+            >
+            <button 
+              type="button" 
+              id="password-toggle" 
+              class="password-toggle"
+              aria-label="Hiện/ẩn mật khẩu"
+            >
+              <img src="assets/icon-eye.svg" alt="Toggle password" class="eye-icon">
+            </button>
+          </div>
+          <div class="form-error" id="password-error" aria-live="polite"></div>
+        </div>
+
+        <div class="form-error" id="error-message" aria-live="polite"></div>
+
+        <button type="submit" id="login-button" class="login-button">
+          Đăng nhập
+        </button>
+
+        <button type="button" id="vnid-button" class="vnid-button">
+          <span class="vnid-text">Đăng nhập bằng tài khoản Định danh điện tử</span>
+          <span class="vnid-badge">V VNID</span>
+        </button>
+      </form>
+
+      <!-- Additional Links -->
+      <div class="login-links">
+        <a href="#" class="login-link">Quên tài khoản (mã số thuế)?</a>
+        <a href="#" class="login-link">Quên mật khẩu?</a>
+      </div>
+
+      <!-- Registration Text -->
+      <div class="register-text">
+        <p>Người nước ngoài hoặc người Việt Nam sống ở nước ngoài không có số định danh cá nhân - chưa có mã số thuế?</p>
+        <a href="#" class="register-link">Đăng ký thuế ngay.</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Built with Badge -->
+  <div class="built-with-badge">
+    <span>Built with VEO</span>
+    <button class="badge-close">×</button>
+  </div>
+
+  <!-- Bottom Navigation (fixed) -->
+  <nav class="bottom-nav" id="bottom-nav">
+    <a href="#" class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7v10c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V9h7c.69 0 1.31.1 1.94.29 1.19-1.39 1.94-3.13 1.94-5 0-3.84-3.16-7-7-7s-7 3.16-7 7c0 1.87.75 3.61 1.94 5 .63-.19 1.25-.29 1.94-.29z"/>
+        </svg>
+      </div>
+      <span class="nav-label">QR tem</span>
+    </a>
+    <a href="#" class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"/>
+        </svg>
+      </div>
+      <span class="nav-label">Tiện ích</span>
+    </a>
+    <a href="#" class="nav-item">
+      <div class="nav-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27-3.11 11-7.5C21.27,7.61 17,4.5 12,4.5z M12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5z M12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z"/>
+        </svg>
+      </div>
+      <span class="nav-label">Hỗ trợ</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script type="module" src="login.js"></script>
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('serviceWorker.js')
+          .then(function(registration) {
+            console.log('SW registered: ', registration);
+          })
+          .catch(function(registrationError) {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

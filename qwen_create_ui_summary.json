@@ -1,0 +1,14 @@
+{
+  "created_files": [
+    "src/components/WebBuilderSimpleUI.jsx",
+    "src/pages/BuilderDemo.jsx",
+    "src/main.jsx",
+    "index.html",
+    "dev-tools/backups/WebBuilderSimpleUI.jsx.backup"
+  ],
+  "npm_install_exit_code": 0,
+  "dev_server_pid": 372486,
+  "dev_server_bound_address": "https://127.0.0.1:5173/",
+  "hmr_test_passed": true,
+  "errors": []
+}

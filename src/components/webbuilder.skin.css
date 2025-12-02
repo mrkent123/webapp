@@ -1,0 +1,465 @@
+/* SOLOIST-Style UI Skin for WebBuilderSimpleUI */
+
+/* Main Layout */
+.webbuilder-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf9 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Top Header Bar */
+.webbuilder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Vertical Panel Layout */
+.webbuilder-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left Toolbox Panel */
+.toolbox-panel {
+  width: 260px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.toolbox-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbox-elements {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.toolbox-element {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  cursor: grab;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  user-select: none;
+  gap: 10px;
+}
+
+.toolbox-element:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.toolbox-element:active {
+  cursor: grabbing;
+  transform: translateY(0);
+}
+
+.toolbox-element-icon {
+  font-size: 1.2rem;
+}
+
+.toolbox-element-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+/* Center Canvas Panel */
+.canvas-panel {
+  flex: 1;
+  padding: 24px;
+  overflow: auto;
+  background: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.canvas-container {
+  width: 100%;
+  max-width: 100%;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  min-height: 600px;
+  position: relative;
+  overflow: auto;
+  transition: all 0.3s ease;
+}
+
+.canvas-container.mobile-preview {
+  width: 393px;
+  min-height: 852px;
+  padding: 30px 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  background: #1e293b;
+  position: relative;
+}
+
+.canvas-container.mobile-preview::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 30px;
+  background: #1e293b;
+  border-radius: 0 0 20px 20px;
+  z-index: 2;
+}
+
+.canvas-container.mobile-preview::after {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border: 4px solid #94a3b8;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.canvas-content {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: auto;
+  position: relative;
+}
+
+/* Right Properties Panel */
+.properties-panel {
+  width: 300px;
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.properties-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.properties-content {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.properties-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.property-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.property-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.property-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  background: #f8fafc;
+}
+
+.property-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: white;
+}
+
+.property-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.property-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.property-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.delete-button {
+  padding: 12px;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.delete-button:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.no-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #94a3b8;
+  text-align: center;
+  padding: 20px;
+}
+
+.no-selection-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.no-selection-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.no-selection-text {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* UI Elements Styling */
+.builder-element {
+  position: relative;
+  margin: 8px;
+  padding: 12px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  min-height: 40px;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.builder-element.selected {
+  border: 2px solid #3b82f6;
+  background-color: rgba(59, 130, 246, 0.05);
+  border-radius: 10px;
+}
+
+.builder-section {
+  background-color: #f8fafc;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 10px 0;
+  min-height: 60px;
+  border: 1px solid #e2e8f0;
+}
+
+.builder-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #1e293b;
+}
+
+.builder-text {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.builder-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.builder-button {
+  padding: 10px 20px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin: 10px 0;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Controls */
+.toggle-button {
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.toggle-button:hover {
+  background: #f1f5f9;
+}
+
+.toggle-button.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.export-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.export-button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.export-button-secondary {
+  background: #10b981;
+}
+
+.export-button-secondary:hover {
+  background: #059669;
+}
+
+/* Drag and drop styling */
+.drop-zone {
+  min-height: 50px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  margin: 10px 0;
+  transition: all 0.2s ease;
+}
+
+.drop-zone.drag-over {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

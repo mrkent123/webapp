@@ -1,0 +1,52 @@
+{
+  "comment": "Sample input schema for testing the export functionality",
+  "elements": [
+    {
+      "id": "section-1",
+      "type": "section",
+      "props": {
+        "padding": "20px",
+        "margin": "10px",
+        "backgroundColor": "#f9fafb"
+      },
+      "children": [
+        {
+          "id": "heading-1",
+          "type": "heading",
+          "props": {
+            "text": "Welcome to the Web Builder",
+            "fontSize": "28px",
+            "fontWeight": "bold",
+            "color": "#1f2937",
+            "textAlign": "center"
+          },
+          "children": []
+        },
+        {
+          "id": "text-1",
+          "type": "text",
+          "props": {
+            "text": "This is a sample text element generated from the builder schema.",
+            "fontSize": "16px",
+            "color": "#4b5563",
+            "textAlign": "left",
+            "lineHeight": "1.6"
+          },
+          "children": []
+        },
+        {
+          "id": "button-1",
+          "type": "button",
+          "props": {
+            "text": "Get Started",
+            "backgroundColor": "#3b82f6",
+            "color": "#ffffff",
+            "padding": "12px 24px",
+            "borderRadius": "6px"
+          },
+          "children": []
+        }
+      ]
+    }
+  ]
+}

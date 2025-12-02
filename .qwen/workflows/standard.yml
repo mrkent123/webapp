@@ -1,0 +1,21 @@
+# Standard Development Workflow
+
+workspace-clean:
+  - preview: "Show what will be cleaned"
+  - execute: "Perform cleaning operations"
+  - confirm: "Verify clean state"
+
+environment-rebuild:
+  - preview: "Show environment setup plan"
+  - execute: "Install dependencies and configure"
+  - confirm: "Verify environment is ready"
+
+snapshot-export:
+  - preview: "Show snapshot contents to be exported"
+  - execute: "Create snapshot archive"
+  - confirm: "Verify snapshot integrity"
+
+report-generate:
+  - preview: "Show report contents to be generated"
+  - execute: "Create report files"
+  - confirm: "Verify report completeness"

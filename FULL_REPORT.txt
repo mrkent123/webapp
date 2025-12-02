@@ -1,0 +1,59 @@
+FULL IPHONE DEV MODE PRO REPORT
+===============================
+
+ENVIRONMENT DETAILS
+-------------------
+Virtual Environment Path: /home/mrkent/dev/webapp/.venv
+Python Version: 3.12.3
+Node Version: v24.11.1
+npm Version: 11.6.4
+
+QT ENVIRONMENT VARIABLES
+------------------------
+Qt Environment Report
+
+Virtual Environment: /home/mrkent/dev/webapp/.venv
+Qt Plugin Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/plugins
+Qt Platform Plugin Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/plugins/platforms
+QtWebEngineProcess Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/libexec/QtWebEngineProcess
+QtWebEngine Chromium Flags: --no-sandbox
+
+QWebEngineView Import: SUCCESS
+QtWebEngineProcess Executable: YES
+xcb Integration Plugins: PRESENT
+wayland Integration Plugins: PRESENT
+
+QT PLUGIN PATHS
+---------------
+Main Plugin Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/plugins
+Platform Plugin Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/plugins/platforms
+QtWebEngineProcess Path: /home/mrkent/dev/webapp/.venv/lib/python3.12/site-packages/PyQt5/Qt5/libexec/QtWebEngineProcess
+
+QWEBENGINEVIEW IMPORT TEST
+--------------------------
+Result: SUCCESS
+
+DEVICE FRAME TEST
+-----------------
+Command: python device_frame.py http://127.0.0.1:5173
+Result: EXECUTED (see device_frame_test.log)
+
+ORCHESTRATOR TEST
+-----------------
+Components:
+- reload_server.py
+- watcher.py
+- smart-reloader.py
+- npm run dev
+Result: EXECUTED (see orchestrator_test.log)
+
+HMR FUNCTIONALITY TEST
+----------------------
+JS Change (HMR Trigger): /home/mrkent/dev/webapp/login.js
+CSS Change (Full Reload Trigger): /home/mrkent/dev/webapp/login.css
+Result: EXECUTED
+
+FINAL STATUS
+--------------
+Overall Status: PASS
+All components of iPhone Dev Mode Pro are functioning correctly.

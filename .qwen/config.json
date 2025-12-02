@@ -1,0 +1,7 @@
+{
+  "mode": "strict",
+  "logging": "detailed",
+  "require_confirmation": true,
+  "preview_before_execute": true,
+  "max_output_lines": 5000
+}

@@ -1,0 +1,92 @@
+/* 
+ * iOS Fixes CSS for iPhone Device Frame Tool
+ * This CSS provides fixes for common iOS rendering issues
+ */
+
+:root {
+  /* Calculate 1vh based on actual viewport height to avoid iOS 100vh bug */
+  --vh: 1vh;
+}
+
+/* Fix for iOS 100vh bug where URL bar affects viewport height */
+body {
+  height: calc(var(--vh, 1vh) * 100);
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Apply safe area insets for iPhone notch and home indicator */
+body {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px);
+}
+
+/* Prevent input zoom on iOS devices */
+input, textarea, select {
+  font-size: 16px !important;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Fix for iOS scroll bounce */
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Improve rendering on high-DPR displays */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Optimize font rendering for iOS */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fix iOS double-tap zoom issue on buttons */
+button, a {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+/* Fix for iOS input focus issues */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* Fix flexbox issues on older iOS versions */
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* Prevent iOS from adjusting font sizes */
+h1, h2, h3, h4, h5, h6 {
+  -webkit-text-size-adjust: none;
+}
+
+/* Fix for iOS rendering issues with fixed positioning */
+.fixed-top, .fixed-bottom {
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Ensure proper DPR rendering for devices */
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+  /* Styles for devices with DPR 3 */
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+}

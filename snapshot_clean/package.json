@@ -1,0 +1,36 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "main": "home.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrkent123/webapp.git"
+  },
+  "keywords": [
+    "pwa",
+    "mobile",
+    "webapp",
+    "ios"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrkent123/webapp/issues"
+  },
+  "homepage": "https://github.com/mrkent123/webapp#readme",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8",
+    "vite-plugin-pwa": "^0.20.0",
+    "@vitejs/plugin-basic-ssl": "^1.1.0"
+  },
+  "description": "eTax Mobile PWA Application"
+}
